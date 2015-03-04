@@ -20,8 +20,7 @@ SparkFiles會配合SparkContext的addFile這個method使用，它能決定addFil
       sc.addFile(“/home/usr/file/1.txt”)
       sf.get("1.txt") #u'/tmp/spark-988df13f-a5d4-4bbe-af95-b8e228ee25fb/1.txt’
       test1 = sc.textFile(sf.get(“1.txt”))
-      test1.first()
-    u’Hello’
+      test1.first() #u’Hello’
     ```
 2. **getRootDirectory (cls)**:
 可取得addFile暫存檔案的目錄。
