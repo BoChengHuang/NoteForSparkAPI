@@ -18,7 +18,7 @@ SparkFiles會配合SparkContext的addFile這個method使用，它能決定addFil
     ```python
       from pyspark import SparkFiles as sf
       sc.addFile(“/home/usr/file/1.txt”)
-      sf.get("1.txt") // u'/tmp/spark-988df13f-a5d4-4bbe-af95-b8e228ee25fb/1.txt’
+      sf.get("1.txt") #u'/tmp/spark-988df13f-a5d4-4bbe-af95-b8e228ee25fb/1.txt’
       test1 = sc.textFile(sf.get(“1.txt”))
       test1.first()
     u’Hello’
@@ -33,6 +33,6 @@ SparkFiles會配合SparkContext的addFile這個method使用，它能決定addFil
     ```python
       from pyspark import SparkFiles as sf
       sc.addFile(“/home/usr/file/1.txt”)
-      sf.getRootDirectory() // u'/tmp/spark-988df13f-a5d4-4bbe-af95-b8e228ee25fb'
+      sf.getRootDirectory() #u'/tmp/spark-988df13f-a5d4-4bbe-af95-b8e228ee25fb'
 	```
 
