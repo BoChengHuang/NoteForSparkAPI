@@ -6,12 +6,12 @@
 	     所得到的結果，即為normalize後，p初始值為2。
 
 ###Class Normalizer
-Normalizer提供的normalization是以Lp norm為基底，將所有資料同除Lp norm。
+Normalizer提供的normalization是以Lp norm為基底，將所有資料同除Lp norm。  
 1. **transform(vector)**:
 此function可將輸入的Vector，透過設定好的normalizer來normalize，Vector可搭配mllib-feature提供的Vectors使用，用一般的Vector也可以。
 
-	使用時機:
-	欲得到資料或Vector的Normaliztion。
+使用時機:
+欲得到資料或Vector的Normaliztion。
 
 	Example:
 	```python
