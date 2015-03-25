@@ -222,7 +222,7 @@ None
 	欲更改minDecFreq的值。
 
 	Example:
-		```python
+	```python
 	n = 4
 	freqs = [Vectors.sparse(n, (1, 3), (1.0, 2.0)),Vectors.dense([0.0, 1.0, 2.0, 3.0]),Vectors.sparse(n, [1], [1.0])]
 	data = sc.parallelize(freqs)
@@ -230,7 +230,7 @@ None
 	model = idf.fit(data)
 	tfidf = model.transform(data)
 	tfidf.collect() #[SparseVector(4, {1: 0.0, 3: 0.5754}), DenseVector([0.0, 0.0, 1.3863, 0.863]),SparseVector(4, {1: 0.0})]
-	#Change minDocFreq to 2
+	  #Change minDocFreq to 2
 	idf.minDocFreq = 2
 	model = idf.fit(data)
 	tfidf = model.transform(data)
@@ -279,6 +279,7 @@ None
 	model.findSynonyms("cut", 3) #[(u'cute', 0.20835110545158386), (u'cot', 0.0087498482316732407), 
 	(u'cet', 0.0081800231710076332)]
 	```	
+
 3. **setNumInterations(numInterations)**: 
 設定Interation得值，初始值為1。
 	
@@ -313,7 +314,7 @@ None
 	doc = sc.parallelize(doc).map(lambda line: line.split(' '))
 
 	word2vec = Word2Vec()
-	#資料量大時，partition的大小設定才會比較有效益。
+		#資料量大時，partition的大小設定才會比較有效益。
 	word2vec.setNumPartitions(2)
 	model = word2vec.fit(doc)
 	model.findSynonyms("cut", 3) #[(u'cet', 0.98814201354980469), (u'cot', 0.96120059490203857),
